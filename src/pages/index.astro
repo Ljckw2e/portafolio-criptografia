@@ -1,11 +1,178 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+<Layout title="Portafolio | Laila Jocelyn Rodríguez Martínez">
+  <main class="min-h-screen bg-gradient-to-br from-slate-900 via-[#2a203b] to-slate-900 text-white font-sans p-4 md:p-8">
+    
+    <!-- Contenedor Principal con efecto Glassmorphism -->
+    <div class="max-w-5xl mx-auto bg-white/5 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-white/10">
+      
+      <!-- PANTALLA DE PRESENTACIÓN -->
+      <header class="flex flex-col md:flex-row items-center p-10 border-b border-white/10 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('/ruta-a-tu-patron-abstracto.svg')] opacity-10"></div>
+        
+        <!-- Fotografía -->
+        <div class="relative w-40 h-40 md:w-52 md:h-52 shrink-0 z-10">
+          <img src="/pfp.jpeg" alt="Laila Jocelyn Rodríguez Martínez" class="w-full h-full object-cover rounded-full border-4 border-purple-300 shadow-xl shadow-purple-300/20 transition-transform hover:scale-105 duration-300">
+        </div>
+        
+        <!-- Info Principal -->
+        <div class="mt-8 md:mt-0 md:ml-10 text-center md:text-left z-10">
+          <h1 class="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-fuchsia-200 pb-2 leading-tight">
+            Laila Jocelyn Rodríguez Martínez
+          </h1>
+          <p class="mt-4 text-xl text-purple-100/90 font-light">
+            Ingeniería en Sistemas Computacionales | ESCOM, Instituto Politécnico Nacional
+          </p>
+          
+          <!-- Botones de Acción (Tonos Pastel) -->
+          <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
+            <a href="/CV_Laila_Rodriguez.pdf" download class="px-6 py-3 bg-purple-300 hover:bg-purple-200 text-purple-950 rounded-full font-semibold transition-all shadow-lg hover:shadow-purple-300/30 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+              Descargar CV
+            </a>
+            <a href="/llave_publica.asc" download class="px-6 py-3 bg-transparent border border-fuchsia-300 hover:bg-fuchsia-300/20 text-fuchsia-200 rounded-full font-semibold transition-all flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
+              Mi Llave Pública
+            </a>
+          </div>
+        </div>
+      </header>
 
-<Layout>
-	<Welcome />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-10">
+        
+        <!-- COLUMNA IZQUIERDA: Contacto y Redes -->
+        <div class="space-y-8">
+          <section class="bg-black/20 p-6 rounded-2xl border border-white/5">
+            <h2 class="text-2xl font-bold mb-4 text-purple-300 border-b border-purple-300/30 pb-2">Contacto</h2>
+              <ul class="space-y-3 w-full">
+                <li class="flex items-center gap-3 overflow-hidden">
+                  <div class="w-8 h-8 rounded-full bg-purple-300/20 flex items-center justify-center shrink-0">
+                    <svg class="w-4 h-4 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  </div>
+                  
+                  <a href="mailto:lrodriguezm2001@alumno.ipn.mx" class="text-sm sm:text-base text-gray-300 hover:text-purple-300 transition-colors truncate block w-full" title="lrodriguezm2001@alumno.ipn.mx">
+                    lrodriguezm2001@alumno.ipn.mx
+                  </a>
+                </li>
+              </ul>
+            
+            <h3 class="text-lg font-bold mt-6 mb-3 text-purple-300">Redes Sociales</h3>
+              <div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                
+                <!-- GitHub -->
+                <a href="https://github.com/Ljckw2e" target="_blank" class="aspect-square bg-white/5 flex items-center justify-center rounded-xl hover:bg-gray-600 hover:scale-110 transition-all duration-300 border border-white/10 shadow-lg">
+                  <svg class="w-6 h-6 fill-current text-gray-300 hover:text-white" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/laila-jocelyn-rodríguez-martínez-931760434?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="aspect-square bg-white/5 flex items-center justify-center rounded-xl hover:bg-[#0A66C2] hover:scale-110 transition-all duration-300 border border-white/10 shadow-lg">
+                  <svg class="w-6 h-6 fill-current text-gray-300 hover:text-white" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/kravinoffh?rpxt=MTQ4a2cxc29kcDFuOQ%3D%3D" target="_blank" class="aspect-square bg-white/5 flex items-center justify-center rounded-xl hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 hover:scale-110 transition-all duration-300 border border-white/10 shadow-lg">
+                  <svg class="w-6 h-6 fill-current text-gray-300 hover:text-white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/1CS5qbQGZr/" target="_blank" class="aspect-square bg-white/5 flex items-center justify-center rounded-xl hover:bg-[#1877F2] hover:scale-110 transition-all duration-300 border border-white/10 shadow-lg">
+                  <svg class="w-6 h-6 fill-current text-gray-300 hover:text-white" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                </a>
+
+                <!-- Spotify -->
+                <a href="https://open.spotify.com/user/22wcxnldor7f3dfxt66qzukbi?si=98300d6a9efa44fa" target="_blank" class="aspect-square bg-white/5 flex items-center justify-center rounded-xl hover:bg-[#1DB954] hover:scale-110 transition-all duration-300 border border-white/10 shadow-lg">
+                  <svg class="w-6 h-6 fill-current text-gray-300 hover:text-white" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.562 17.31c-.244.394-.753.518-1.144.275-3.136-1.916-7.079-2.348-11.727-1.285-.436.1-.878-.172-.979-.607-.101-.436.173-.878.608-.979 5.077-1.159 9.421-.663 12.969 1.503.391.243.513.754.273 1.093zm1.464-3.266c-.309.502-.958.665-1.458.358-3.585-2.203-9.063-2.825-13.111-1.547-.565.178-1.157-.135-1.335-.7-.179-.565.134-1.157.7-1.335 4.618-1.46 10.662-.77 14.847 1.802.5.307.663.956.357 1.422zm.126-3.41c-4.288-2.545-11.365-2.78-15.485-1.538-.679.206-1.393-.178-1.599-.858-.206-.679.178-1.393.858-1.599 4.735-1.426 12.55-1.149 17.502 1.791.613.364.811 1.141.447 1.753-.365.612-1.142.812-1.723.451z"/></svg>
+                </a>
+
+                <!-- Apple Music -->
+                <a href="https://music.apple.com/profile/jack0613?ls" target="_blank" class="aspect-square bg-white/5 flex items-center justify-center rounded-xl hover:bg-[#FA243C] hover:scale-110 transition-all duration-300 border border-white/10 shadow-lg">
+                  <svg class="w-6 h-6 fill-current text-gray-300 hover:text-white" viewBox="0 0 24 24"><path d="M15.421 12.305c-.015-3.032 2.502-4.484 2.617-4.557-1.422-2.072-3.626-2.355-4.417-2.395-1.879-.188-3.673 1.107-4.633 1.107-.959 0-2.431-1.077-3.99-1.047-2.025.029-3.89 1.176-4.935 2.977-2.126 3.655-.544 9.043 1.523 12.025 1.009 1.458 2.203 3.093 3.791 3.034 1.517-.061 2.086-.976 3.92-.976 1.833 0 2.364.976 3.951.944 1.618-.032 2.646-1.488 3.642-2.946 1.144-1.658 1.616-3.266 1.637-3.348-.035-.015-3.093-1.187-3.106-4.718zm-2.97-6.286c.821-.99 1.375-2.364 1.224-3.734-1.182.048-2.618.784-3.468 1.766-.677.777-1.344 2.184-1.161 3.526 1.321.103 2.585-.568 3.405-1.558z"/></svg>
+                </a>
+              </div>
+          </section>
+
+          <!-- SECCIÓN DE CRIPTOGRAFÍA -->
+          <section class="bg-black/20 p-6 rounded-2xl border border-white/5">
+            <h2 class="text-2xl font-bold mb-4 text-fuchsia-200 border-b border-fuchsia-300/30 pb-2">Acerca de Criptografía</h2>
+            <div class="text-sm text-gray-300 space-y-3">
+              <h3 class="text-white font-semibold text-base">El Algoritmo RSA</h3>
+              <p>
+                Dado que próximamente generaremos llaves públicas, es fascinante recordar que el algoritmo RSA (Rivest-Shamir-Adleman), creado en 1977, fue uno de los primeros sistemas de criptografía de clave pública y es pionero en la firma digital.
+              </p>
+              <p>
+                Su seguridad radica en la dificultad práctica de factorizar números enteros muy grandes (el producto de dos números primos grandes elegidos al azar).
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- COLUMNA DERECHA: Hobbies -->
+        <div class="md:col-span-2 space-y-8">
+          <section>
+            <h2 class="text-3xl font-bold mb-6 text-purple-300 inline-block border-b-2 border-purple-300/50 pb-2">Mis Hobbies</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">       
+            
+            <!-- Hobby 1: Mascotas y Animales -->
+            <div class="group relative overflow-hidden rounded-2xl aspect-video bg-black/40 border border-white/10 shadow-lg hover:ring-2 hover:ring-purple-300/40 transition-all">
+              <a href="/mascotas.jpg" target="_blank" class="block w-full h-full cursor-zoom-in">
+                <img src="/mascotas.jpg" alt="Wikyy y loros" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                <div class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                  <h3 class="font-bold text-lg text-white">Animales</h3>
+                  <p class="text-sm text-purple-100/80 mt-1">Amo pasar tiempo con un par de loros muy especiales y consentir a mi conejito Wikyy.</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Hobby 2: Música y Conciertos -->
+            <div class="group relative overflow-hidden rounded-2xl aspect-video bg-black/40 border border-white/10 shadow-lg hover:ring-2 hover:ring-purple-300/40 transition-all">
+              <a href="/conciertos.jpeg" target="_blank" class="block w-full h-full cursor-zoom-in">
+                <img src="/conciertos.jpeg" alt="Música y Conciertos" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                <div class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                  <h3 class="font-bold text-lg text-white">Música y Conciertos</h3>
+                  <p class="text-sm text-purple-100/80 mt-1">Me fascina la energía de ir a conciertos y escuchar gran variedad de géneros. Mi banda favorita indiscutible es BTS.</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Hobby 3: Cocina -->
+            <div class="group relative overflow-hidden rounded-2xl aspect-video bg-black/40 border border-white/10 shadow-lg hover:ring-2 hover:ring-purple-300/40 transition-all">
+              <a href="/cocina.jpg" target="_blank" class="block w-full h-full cursor-zoom-in">
+                <img src="/cocina.jpg" alt="Cocina y Pastas" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                <div class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                  <h3 class="font-bold text-lg text-white">Cocinar</h3>
+                  <p class="text-sm text-purple-100/80 mt-1">Me encanta meterme a la cocina y experimentar con diferentes platillos, pero mi gran especialidad son las pastas.</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Hobby 4: Amigos -->
+            <div class="group relative overflow-hidden rounded-2xl aspect-video bg-black/40 border border-white/10 shadow-lg hover:ring-2 hover:ring-purple-300/40 transition-all">
+              <a href="/amigos.jpeg" target="_blank" class="block w-full h-full cursor-zoom-in">
+                <img src="/amigos.jpeg" alt="Mis amigos" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                <div class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                  <h3 class="font-bold text-lg text-white">Amigos</h3>
+                  <p class="text-sm text-purple-100/80 mt-1">Disfrutar de la compañía de mis amigos, salir y compartir buenos momentos es de mis partes favoritas del día.</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Hobby 5: Fotografía del Cielo (Ocupa dos columnas) -->
+            <div class="group relative overflow-hidden rounded-2xl aspect-video sm:aspect-[21/9] bg-black/40 border border-white/10 shadow-lg sm:col-span-2 hover:ring-2 hover:ring-purple-300/40 transition-all">
+              <a href="/cielo.jpeg" target="_blank" class="block w-full h-full cursor-zoom-in">
+                <img src="/cielo.jpeg" alt="Fotografía del cielo" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                <div class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                  <h3 class="font-bold text-lg text-white">Fotografía del Cielo</h3>
+                  <p class="text-sm text-purple-100/80 mt-1">Me encanta admirar el paisaje y tomarle fotos al cielo, capturando atardeceres, nubes y colores únicos.</p>
+                </div>
+              </a>
+            </div>
+
+          </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
